@@ -5,15 +5,15 @@ import { DebounceInput } from 'react-debounce-input'; // https://www.npmjs.com/p
 // Import Context
 import { AutoCompleteContext } from 'globalState';
 // Import components
-import Message from 'components/shared/Message/Message';
-import Icon from 'components/shared/Icon/Icon';
-import TrainAutoCompleteResult from './TrainAutoCompleteResult/TrainAutoCompleteResult';
-import SelectedServiceHeader from '../SelectedServiceHeader/SelectedServiceHeader';
+import { Message } from 'components/shared/Message/Message';
+import { Icon } from 'components/shared/Icon/Icon';
+import { TrainAutoCompleteResult } from './TrainAutoCompleteResult/TrainAutoCompleteResult';
+import { SelectedServiceHeader } from '../SelectedServiceHeader/SelectedServiceHeader';
 // CustomHooks
 import useHandleAutoCompleteKeys from '../customHooks/useHandleAutoCompleteKeys';
 import useAutoCompleteAPI from '../customHooks/useAutoCompleteAPI';
 
-const TrainAutoComplete = ({ id, label, queryId }) => {
+export function TrainAutoComplete({ id, label, queryId }) {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
 
   const resultsList = useRef(null);
@@ -103,7 +103,7 @@ const TrainAutoComplete = ({ id, label, queryId }) => {
       )}
     </div>
   );
-};
+}
 
 // PropTypes
 TrainAutoComplete.propTypes = {

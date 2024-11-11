@@ -3,14 +3,14 @@ import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { MapContext } from 'globalState';
 
-import Icon from '../Icon/Icon';
-import AccessIcon from '../Icon/AccessIcon';
-import Button from '../Button/Button';
+import { Icon } from '../Icon/Icon';
+import { AccessIcon } from '../Icon/AccessIcon';
+import { Button } from '../Button/Button';
 import Checkbox from '../Checkbox/Checkbox';
 
 import s from './AccessibilityKey.module.scss';
 
-const AccessibilityKey = ({ mapView }) => {
+export function AccessibilityKey({ mapView }) {
   const [mapState, mapDispatch] = useContext(MapContext);
   const [showKey, setShowKey] = useState(!mapView);
 
@@ -117,7 +117,7 @@ const AccessibilityKey = ({ mapView }) => {
       {showKey && Key}
     </div>
   );
-};
+}
 
 AccessibilityKey.propTypes = {
   mapView: PropTypes.bool,

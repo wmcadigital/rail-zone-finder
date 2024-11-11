@@ -4,7 +4,7 @@ import MapControls from './MapControls/MapControls';
 import useMapMethods from './customHooks/useMapMethods';
 import s from './Map.module.scss';
 
-const RailZoneMap = () => {
+export function RailZoneMap() {
   const { mapState, mapDispatch } = useMapMethods();
   const [tool, setTool] = useState(TOOL_PAN);
   const [value, setValue] = useState(INITIAL_VALUE);
@@ -5155,6 +5155,6 @@ const RailZoneMap = () => {
       </ReactSVGPanZoom>
     </>
   );
-};
+}
 
 export default RailZoneMap;
