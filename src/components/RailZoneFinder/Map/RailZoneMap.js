@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { INITIAL_VALUE, ReactSVGPanZoom, TOOL_PAN } from 'react-svg-pan-zoom';
-import MapControls from './MapControls/MapControls';
+import { MapControls } from './MapControls/MapControls';
 import useMapMethods from './customHooks/useMapMethods';
 import s from './Map.module.scss';
 

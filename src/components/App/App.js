@@ -1,5 +1,5 @@
 import React from 'react';
-import ContextProvider from 'globalState/ContextProvider';
+import { ContextProvider } from 'globalState/ContextProvider';
 import RailZoneFinder from '../RailZoneFinder/RailZoneFinder';
 
 function App() {

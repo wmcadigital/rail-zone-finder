@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import { MapContext } from 'globalState';
-import RailZoneMap from './RailZoneMap';
-import AccessibilityKey from '../../shared/AccessibilityKey/AccessibilityKey';
+import { RailZoneMap } from './RailZoneMap';
+import { AccessibilityKey } from '../../shared/AccessibilityKey/AccessibilityKey';
 
 import s from './Map.module.scss';
 

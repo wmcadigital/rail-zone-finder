@@ -1,7 +1,7 @@
 import React from 'react';
 // Rail zone svg component
 import { Map } from '../Map/Map';
-import AutoComplete from '../../shared/AutoComplete/AutoComplete';
+import { AutoComplete } from '../../shared/AutoComplete/AutoComplete';
 import s from './MapView.module.scss';
 
 export function MapView() {
