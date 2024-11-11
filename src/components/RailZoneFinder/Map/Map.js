@@ -5,7 +5,7 @@ import AccessibilityKey from '../../shared/AccessibilityKey/AccessibilityKey';
 
 import s from './Map.module.scss';
 
-const Map = () => {
+export function Map() {
   const [, mapDispatch] = useContext(MapContext);
   const mapContainer = useRef(null);
 
@@ -24,6 +24,6 @@ const Map = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Map;

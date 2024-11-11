@@ -3,7 +3,7 @@ import { AutoCompleteContext } from 'globalState';
 // Import styles
 import s from './TrainAutoCompleteResult.module.scss';
 
-const TrainAutoCompleteResult = (props) => {
+export function TrainAutoCompleteResult(props) {
   const { result, handleKeyDown, queryId } = props || {};
   const [, autoCompleteDispatch] = useContext(AutoCompleteContext);
 
@@ -35,6 +35,6 @@ const TrainAutoCompleteResult = (props) => {
       <strong className={`${s.routeName}`}>{result.stationName}</strong>
     </li>
   );
-};
+}
 
 export default TrainAutoCompleteResult;

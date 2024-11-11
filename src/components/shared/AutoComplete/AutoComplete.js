@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 // Import context
 import { AutoCompleteContext } from 'globalState';
 // Import components
-import Button from '../Button/Button';
-import Icon from '../Icon/Icon';
-import Result from '../Result/Result';
+import { Button } from '../Button/Button';
+import { Icon } from '../Icon/Icon';
+import { Result } from '../Result/Result';
 import TrainAutoComplete from './TrainAutoComplete/TrainAutocomplete';
 import s from './AutoComplete.module.scss';
 // Import custom hook
 import useMapControls from '../../RailZoneFinder/Map/customHooks/useMapControls';
 
-const AutoComplete = () => {
+export function AutoComplete() {
   const [autoCompleteState, autoCompleteDispatch] = useContext(AutoCompleteContext);
   const { selectedStations } = autoCompleteState;
   const { resetMap } = useMapControls();
@@ -90,6 +90,6 @@ const AutoComplete = () => {
       )}
     </>
   );
-};
+}
 
 export default AutoComplete;

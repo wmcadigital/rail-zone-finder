@@ -7,7 +7,7 @@ import AccessIcon from '../Icon/AccessIcon';
 // Import styles
 import s from './Result.module.scss';
 
-const Result = () => {
+export function Result() {
   const [autoCompleteState] = useContext(AutoCompleteContext);
   const { selectedStations, ticketMode } = autoCompleteState;
 
@@ -116,6 +116,6 @@ const Result = () => {
       )}
     </div>
   );
-};
+}
 
 export default Result;

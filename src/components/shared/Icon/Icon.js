@@ -6,8 +6,7 @@ import s from './Icon.module.scss';
 // So we Ajax the SVG in with a snippet at the bottom of public/index.html
 
 // Icons can be found at: https://designsystem.wmnetwork.co.uk/styles/icons/
-
-const Icon = ({ className, iconName, size, color, title }) => {
+export function Icon({ className, iconName, size, color, title }) {
   return (
     <svg
       className={`${className} ${(color && s[color]) || ''}`}
@@ -18,7 +17,7 @@ const Icon = ({ className, iconName, size, color, title }) => {
       <use xlinkHref={`#wmnds-${iconName}`} href={`#wmnds-${iconName}`} />
     </svg>
   );
-};
+}
 
 Icon.propTypes = {
   iconName: PropTypes.string.isRequired,
