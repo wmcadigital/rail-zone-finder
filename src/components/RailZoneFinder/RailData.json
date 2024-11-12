@@ -620,7 +620,7 @@
       "stationName": "Shirley",
       "railZone": 4,
       "parking": true,
-      "stepFreeAccess": "partial"
+      "stepFreeAccess": "full"
     },
     {
       "crsCode": "SHR",
