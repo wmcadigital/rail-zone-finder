@@ -9,7 +9,7 @@ export function MapView() {
     <div className={s.mapViewSection}>
       <div className={`${s.container} wmnds-grid wmnds-grid--spacing-md-2-lg`}>
         <div className="wmnds-col-1-1 wmnds-col-md-1-2 wmnds-col-lg-1-3">
-          <div className="bg-white wmnds-p-md">
+          <div className="bgWhite wmnds-p-md">
             <AutoComplete />
           </div>
         </div>

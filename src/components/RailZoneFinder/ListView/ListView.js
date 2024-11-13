@@ -37,7 +37,7 @@ export function ListView() {
     <div className="wmnds-container">
       <div className="wmnds-grid wmnds-grid--spacing-md-2-lg wmnds-p-b-md">
         <div className="wmnds-col-1-1 wmnds-col-md-2-3">
-          <div className={`bg-white wmnds-p-md ${s.trayComponents}`}>
+          <div className={`bgWhite wmnds-p-md ${s.trayComponents}`}>
             <AutoComplete />
           </div>
         </div>

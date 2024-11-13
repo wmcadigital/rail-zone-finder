@@ -86,7 +86,7 @@ export function AccessibilityKey({ mapView }) {
           onClick={() => setShowKey(true)}
         />
       ) : (
-        <div className={`wmnds-p-md bg-white ${s.accessMenu} ${s.mapKey}`}>
+        <div className={`wmnds-p-md bgWhite ${s.accessMenu} ${s.mapKey}`}>
           <div className={`wmnds-grid wmnds-grid--justify-between ${s.keyHeader}`}>
             <h3 className="wmnds-col-auto">Show parking and accessibility</h3>
             <div className="wmnds-col-auto">
@@ -103,7 +103,7 @@ export function AccessibilityKey({ mapView }) {
       )}
     </div>
   ) : (
-    <div className={`wmnds-p-md bg-white ${s.accessMenu}`}>
+    <div className={`wmnds-p-md bgWhite ${s.accessMenu}`}>
       <div className="wmnds-grid wmnds-grid--justify-between">
         <h3 className={`h2 wmnds-col-auto ${!showKey && 'wmnds-m-b-none'}`}>Key</h3>
         <div className="wmnds-col-auto">
