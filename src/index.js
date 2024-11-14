@@ -3,15 +3,19 @@ import 'react-app-polyfill/stable';
 import './assets/js/polyfills/polyfill-includes';
 // React
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as ReactDOMClient from 'react-dom/client';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+const container = document.getElementById('wmn-app-name');
+
+// Create a root.
+const root = ReactDOMClient.createRoot(container);
+
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('wmn-app-name')
+  </React.StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change

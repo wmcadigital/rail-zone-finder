@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import Button from '../../shared/Button/Button';
-import AccessIcon from '../../shared/Icon/AccessIcon';
-import Icon from '../../shared/Icon/Icon';
-import AccessibilityKey from '../../shared/AccessibilityKey/AccessibilityKey';
-import Accordion from '../../shared/Accordion/Accordion';
-import AutoComplete from '../../shared/AutoComplete/AutoComplete';
+import { Button } from '../../shared/Button/Button';
+import { AccessIcon } from '../../shared/Icon/AccessIcon';
+import { Icon } from '../../shared/Icon/Icon';
+import { AccessibilityKey } from '../../shared/AccessibilityKey/AccessibilityKey';
+import { Accordion } from '../../shared/Accordion/Accordion';
+import { AutoComplete } from '../../shared/AutoComplete/AutoComplete';
 import s from './ListView.module.scss';
 
 import railData from '../RailData.json';
 
-const ListView = () => {
+export function ListView() {
   const [accordions, setAccordions] = useState([
     { name: 'Zone 1', open: false },
     { name: 'Zone 2', open: false },
@@ -37,7 +37,7 @@ const ListView = () => {
     <div className="wmnds-container">
       <div className="wmnds-grid wmnds-grid--spacing-md-2-lg wmnds-p-b-md">
         <div className="wmnds-col-1-1 wmnds-col-md-2-3">
-          <div className={`bg-white wmnds-p-md ${s.trayComponents}`}>
+          <div className={`bgWhite wmnds-p-md ${s.trayComponents}`}>
             <AutoComplete />
           </div>
         </div>
@@ -109,6 +109,7 @@ const ListView = () => {
                       <li key={station.crsCode} className={s.accordionListItem}>
                         {station.stationName}
                         {station.stepFreeAccess && (
+                          // eslint-disable-next-line react/jsx-no-useless-fragment
                           <>
                             {station.stepFreeAccess === 'full' ? (
                               <>
@@ -154,6 +155,6 @@ const ListView = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ListView;

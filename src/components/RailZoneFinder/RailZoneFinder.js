@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { MapContext, AutoCompleteContext } from 'globalState';
 // Rail zone svg component
-import Button from '../shared/Button/Button';
-import Icon from '../shared/Icon/Icon';
+import { Button } from '../shared/Button/Button';
+import { Icon } from '../shared/Icon/Icon';
 import Breadcrumbs from '../shared/Breadcrumbs/Breadcrumbs';
-import MapView from './MapView/MapView';
-import ListView from './ListView/ListView';
+import { MapView } from './MapView/MapView';
+import { ListView } from './ListView/ListView';
 import s from './RailZoneFinder.module.scss';
 
 function RailZoneFinder() {

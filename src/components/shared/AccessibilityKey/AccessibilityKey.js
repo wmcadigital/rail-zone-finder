@@ -3,14 +3,14 @@ import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { MapContext } from 'globalState';
 
-import Icon from '../Icon/Icon';
-import AccessIcon from '../Icon/AccessIcon';
-import Button from '../Button/Button';
+import { Icon } from '../Icon/Icon';
+import { AccessIcon } from '../Icon/AccessIcon';
+import { Button } from '../Button/Button';
 import Checkbox from '../Checkbox/Checkbox';
 
 import s from './AccessibilityKey.module.scss';
 
-const AccessibilityKey = ({ mapView }) => {
+export function AccessibilityKey({ mapView }) {
   const [mapState, mapDispatch] = useContext(MapContext);
   const [showKey, setShowKey] = useState(!mapView);
 
@@ -86,7 +86,7 @@ const AccessibilityKey = ({ mapView }) => {
           onClick={() => setShowKey(true)}
         />
       ) : (
-        <div className={`wmnds-p-md bg-white ${s.accessMenu} ${s.mapKey}`}>
+        <div className={`wmnds-p-md bgWhite ${s.accessMenu} ${s.mapKey}`}>
           <div className={`wmnds-grid wmnds-grid--justify-between ${s.keyHeader}`}>
             <h3 className="wmnds-col-auto">Show parking and accessibility</h3>
             <div className="wmnds-col-auto">
@@ -103,7 +103,7 @@ const AccessibilityKey = ({ mapView }) => {
       )}
     </div>
   ) : (
-    <div className={`wmnds-p-md bg-white ${s.accessMenu}`}>
+    <div className={`wmnds-p-md bgWhite ${s.accessMenu}`}>
       <div className="wmnds-grid wmnds-grid--justify-between">
         <h3 className={`h2 wmnds-col-auto ${!showKey && 'wmnds-m-b-none'}`}>Key</h3>
         <div className="wmnds-col-auto">
@@ -117,7 +117,7 @@ const AccessibilityKey = ({ mapView }) => {
       {showKey && Key}
     </div>
   );
-};
+}
 
 AccessibilityKey.propTypes = {
   mapView: PropTypes.bool,

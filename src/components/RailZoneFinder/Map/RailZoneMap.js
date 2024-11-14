@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { INITIAL_VALUE, ReactSVGPanZoom, TOOL_PAN } from 'react-svg-pan-zoom';
-import MapControls from './MapControls/MapControls';
+import { MapControls } from './MapControls/MapControls';
 import useMapMethods from './customHooks/useMapMethods';
 import s from './Map.module.scss';
 
-const RailZoneMap = () => {
+export function RailZoneMap() {
   const { mapState, mapDispatch } = useMapMethods();
   const [tool, setTool] = useState(TOOL_PAN);
   const [value, setValue] = useState(INITIAL_VALUE);
@@ -2681,7 +2681,7 @@ const RailZoneMap = () => {
                 id="Parking-26"
                 data-name="Parking"
               />
-              <g id="Part_Step_Free_Access-16" data-name="Part Step Free Access">
+              <g id="Full_Step_Free_Access-62" data-name="Full Step Free Access">
                 <path
                   className="cls-45"
                   d="M447.73 483a3 3 0 113-3 3 3 0 01-3 3z"
@@ -2689,11 +2689,6 @@ const RailZoneMap = () => {
                 />
                 <path
                   className="cls-6"
-                  d="M447.73 477.31a2.64 2.64 0 102.64 2.64 2.65 2.65 0 00-2.64-2.64z"
-                  transform="translate(0 38.73)"
-                />
-                <path
-                  className="cls-45"
                   d="M447.18 481.85a1.26 1.26 0 01-1.26-1.26 1.28 1.28 0 01.71-1.13h.11l.06.43h-.05a.84.84 0 00-.42.72.85.85 0 00.85.85.86.86 0 00.84-.72v-.08h.41v.1a1.26 1.26 0 01-1.25 1.11m2-.3a.31.31 0 01-.35-.24l-.32-.86h-1.41l-.12-.79a5.31 5.31 0 01-.1-.67.41.41 0 01.4-.42c.36 0 .4.33.43.56h.75v.09c0 .41-.31.41-.5.41h-.18v.2h1l.46 1.26h.05a.28.28 0 01.26.27c0 .09-.06.18-.21.18h-.22m-1.92-3.1a.42.42 0 11.41-.41.41.41 0 01-.41.41"
                   transform="translate(0 38.73)"
                 />
@@ -5155,6 +5150,6 @@ const RailZoneMap = () => {
       </ReactSVGPanZoom>
     </>
   );
-};
+}
 
 export default RailZoneMap;

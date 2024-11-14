@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 // Imported components
-import CloseButton from './CloseButton/CloseButton';
+import { CloseButton } from './CloseButton/CloseButton';
 import s from './SelectedServiceHeader.module.scss';
 import useMapControls from '../../../RailZoneFinder/Map/customHooks/useMapControls';
 
-const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryId }) => {
+export function SelectedServiceHeader({ autoCompleteState, autoCompleteDispatch, queryId }) {
   const selectedServiceRef = useRef(null);
   const { resetMapStation } = useMapControls();
 
@@ -30,10 +30,11 @@ const SelectedServiceHeader = ({ autoCompleteState, autoCompleteDispatch, queryI
       </div>
     </>
   );
-};
+}
 
 // PropTypes
 SelectedServiceHeader.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   autoCompleteState: PropTypes.objectOf(PropTypes.any).isRequired,
   autoCompleteDispatch: PropTypes.func.isRequired,
   queryId: PropTypes.number.isRequired,
